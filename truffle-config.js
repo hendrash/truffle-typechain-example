@@ -1,9 +1,5 @@
 require("ts-node/register");
-const { exec } = require("child_process");
 let fs = require("fs");
-
-var development = this;
-
 let versionManager = (branch) => {
     if( branch==="main_net")
       return {
@@ -44,29 +40,14 @@ const writeToFile = (dev) => {
   return dev
 };
 
-temp = () => {
+dev = () => {
   const branchName = require("current-git-branch");
-
-console.log(writeToFile(versionManager(branchName())));
-
 return writeToFile(versionManager(branchName()));
-  // return {
-  //   host: "localhost",
-  //   port: 8545,
-  //   network_id: "*", // Match any network id
-  //   gas: 5000000,
-  // };
 };
 module.exports = {
   networks: {
-    development: temp(),
-    // development: {
-    //   host: "localhost",
-    //   port: 8545,
-    //   network_id: "*", // Match any network id
-    //   gas: 5000000,
-    // },
-  },
+    development: dev(),
+ },
   compilers: {
     solc: {
       version: "^0.8.4",
