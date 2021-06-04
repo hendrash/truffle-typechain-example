@@ -12,9 +12,13 @@
     "typescript": "^3.1.6"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^4.1.0",
+    "current-git-branch": "^1.1.0",
+    "dotenv": "^10.0.0",
     "truffle": "^4.1.14"
   },
   "scripts": {
+    "scripts": "ts-node scripts/server.ts",
     "generate": "truffle compile && typechain --target truffle './build/**/*.json'",
     "prepare": "yarn generate",
     "test": "truffle test && yarn tsc",
