@@ -11,7 +11,7 @@ export const TestNet: NetConnection = {
 }
 // https://bscscan.com/address/0xe9e7cea3dedca5984780bafc599bd69add087d56
 export const MainNet: NetConnection = {
-    BridgeEventContractAddress: "",
+    BridgeEventContractAddress: "0xd37eAa8738F8AC6B48217b46a918Cf39929cEAB5",
     RPC_URL: "https://bsc-dataseed.binance.org/",
     stableCoinAddress: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     walletConfig: {
