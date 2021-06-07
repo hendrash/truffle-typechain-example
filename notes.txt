@@ -1,3 +1,82 @@
+
+
+Starting migrations...
+======================
+> Network name:    'mainnet'
+> Network id:      56
+> Block gas limit: 60000000 (0x3938700)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'BridgeEvent'
+   -----------------------
+   > transaction hash:    0x0f427ded31627a63d4d3a0a7a1d5bc935fd48c53411ef598d69a0ea90c44951d
+   > Blocks: 2            Seconds: 8
+   > contract address:    0xa53501a2FC4020eC73a860a3264c3419BA5df801
+   > block number:        8077383
+   > block timestamp:     1623033123
+   > account:             0x276e4B2EdE2a6d6A30A9E4453f9Ef6d69FFf3CD8
+   > balance:             0.09806898
+   > gas used:            155095 (0x25dd7)
+   > gas price:           5 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000775475 ETH
+
+   Pausing for 10 confirmations...
+   -------------------------------
+   > confirmation number: 2 (block: 8077386)
+   > confirmation number: 3 (block: 8077387)
+   > confirmation number: 4 (block: 8077388)
+   > confirmation number: 6 (block: 8077390)
+   > confirmation number: 7 (block: 8077391)
+   > confirmation number: 8 (block: 8077392)
+   > confirmation number: 10 (block: 8077394)
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:         0.000775475 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Replacing 'BridgeEvent'
+   -----------------------
+   > transaction hash:    0xe127d7777d32550f381c707e63ee11eb2eb6518147afc4f0e13b5e7d7c76f8ef
+   > Blocks: 3            Seconds: 8
+   > contract address:    0xc2f730261cf02D28aC7e2Cb06535048256413ACf
+   > block number:        8077397
+   > block timestamp:     1623033165
+   > account:             0x276e4B2EdE2a6d6A30A9E4453f9Ef6d69FFf3CD8
+   > balance:             0.097293505
+   > gas used:            155095 (0x25dd7)
+   > gas price:           5 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000775475 ETH
+
+   Pausing for 10 confirmations...
+   -------------------------------
+   > confirmation number: 1 (block: 8077399)
+   > confirmation number: 3 (block: 8077401)
+   > confirmation number: 4 (block: 8077402)
+   > confirmation number: 5 (block: 8077403)
+   > confirmation number: 7 (block: 8077405)
+   > confirmation number: 8 (block: 8077406)
+   > confirmation number: 9 (block: 8077407)
+   > confirmation number: 11 (block: 8077409)
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:         0.000775475 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.00155095 ETH
+
+
+
 Starting migrations...
 ======================
 > Network name:    'testnet'

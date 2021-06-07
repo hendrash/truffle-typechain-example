@@ -1,19 +1,16 @@
-import { config } from "dotenv"
 import BridgeEvent from "../build/abi/BridgeEvent.json"
 import { web3Provider } from "./config"
-import { network, TestNet } from "./globals"
+import { networkConfig } from "./globals"
 
 async function server() {
-    const bridgeEvent = new web3Provider.eth.Contract((BridgeEvent as any), network().BridgeEventContract)
+    const bridgeEvent = new web3Provider.eth.Contract((BridgeEvent as any), networkConfig().BridgeEventContractAddress)
     try {
-        // console.log(await bridgeEvent.methods.bridgeUSDC)
-        // console.log(await bridgeEvent)
-        console.log(await bridgeEvent.methods.bridgeUSDC('1').send({
-            from: '0x276e4B2EdE2a6d6A30A9E4453f9Ef6d69FFf3CD8'
+        console.log(await bridgeEvent.methods.bridgeUSDC('1000000',networkConfig().stableCoinAddress).send({
+            from: networkConfig().walletConfig.address
         },
             function (err: any, res: any) {
                 if (err) {
-                    console.error("ERROR", err)
+                    console.error("Error from within the contract:\n", err,res)
                     return;
                 } else {
                     console.log("Transaction Hash: \t" + res)
