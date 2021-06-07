@@ -10,7 +10,8 @@ using SafeERC20 for IERC20;
           uint _amount
      );
 function bridgeUSDC(uint256 _amount,address stableCoin) external payable{
-     IERC20(address(stableCoin)).transferFrom(msg.sender, address(this),_amount);
+
+     IERC20(stableCoin).transferFrom(msg.sender, address(this),_amount);
     emit Bridge(msg.sender, _amount);
      }
 }

@@ -5,7 +5,7 @@ import { networkConfig } from "./globals"
 async function server() {
     const bridgeEvent = new web3Provider.eth.Contract((BridgeEvent as any), networkConfig().BridgeEventContractAddress)
     try {
-        console.log(await bridgeEvent.methods.bridgeUSDC('1000000',networkConfig().stableCoinAddress).send({
+        console.log(await bridgeEvent.methods.bridgeUSDC('100',networkConfig().stableCoinAddress).send({
             from: networkConfig().walletConfig.address
         },
             function (err: any, res: any) {
