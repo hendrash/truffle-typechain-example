@@ -7,3 +7,5 @@ module.exports = function(deployer) {
   // deployer.deploy(MetaCoin);
   deployer.deploy(BridgeEvent);
 };
+// tcp.port == 8545 && ip.addr==54.199.148.5
+// useful for debugging

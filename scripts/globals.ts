@@ -5,11 +5,11 @@ export const TestNet: NetConnection = {
     RPC_URL: "https://data-seed-prebsc-1-s1.binance.org:8545/"
 }
 export const MainNet: NetConnection = {
-    BridgeEventContract: "",
-    RPC_URL: ""
+    BridgeEventContract: "https://bsc-dataseed.binance.org/",
+    RPC_URL: "56"
 }
 export const LocalNet: NetConnection = {
-    BridgeEventContract: "",
+    BridgeEventContract: "0x935bD84265ce0d6Ade43189F6084880C64834EAe",
     RPC_URL: ""
 }
 export type NetConnection = {
@@ -18,10 +18,10 @@ export type NetConnection = {
 }
 export const network = () => {
     config();
-    if (process.env.NETWORK + "" === "Main_Net") {
+    if (process.env.NETWORK + "" === "MAIN") {
         return MainNet;
     }
-    if (process.env.NETWORK + "" === "Test_Net") {
+    if (process.env.NETWORK + "" === "TEST") {
         return TestNet;
     }
     else {

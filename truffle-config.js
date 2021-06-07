@@ -1,5 +1,11 @@
 require("ts-node/register");
 const HDWalletProvider = require("@truffle/hdwallet-provider");
+let fs = require("fs");
+const mnemonic = fs
+  .readFileSync(".secret")
+  .toString()
+  .trim();
+
 module.exports = {
   networks: {
     development: {
