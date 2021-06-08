@@ -19,9 +19,9 @@ export const MainNet: NetConnection = {
     }
 }
 export const LocalNet: NetConnection = {
-    BridgeEventContractAddress: "0x2dcb487C74F3bFBE119d6128067A72F215e1B766",
-    RPC_URL: "",
-    stableCoinAddress: '0xD9D4d7dd5926db78754F5d4dbC28C389C4601982',
+    BridgeEventContractAddress: "0xa7F3fb5F0C4515c6bBCde00B77B6786f8d135Fb6",
+    RPC_URL: "HTTP://127.0.0.1:8545",
+    stableCoinAddress: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     walletConfig: {
         address: "0xa84019C3A670826555D3442EfB68ED49fd1660F4"
     }
