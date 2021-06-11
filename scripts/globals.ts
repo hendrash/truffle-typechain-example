@@ -1,8 +1,9 @@
 import { config } from "dotenv"
 
 export const TestNet: NetConnection = {
-    BridgeEventContractAddress: "0xfA2D9Df5F5d8A26B821c3F2f564F7BdB2D9342F2",
+    BridgeEventContractAddress: "0x276e4B2EdE2a6d6A30A9E4453f9Ef6d69FFf3CD8",
     RPC_URL: "https://data-seed-prebsc-1-s1.binance.org:8545/",
+    socket: '',
     stableCoinAddress: '0xd37eAa8738F8AC6B48217b46a918Cf39929cEAB5',
     // https://testnet.bscscan.com/address/0xd37eaa8738f8ac6b48217b46a918cf39929ceab5
     walletConfig: {
@@ -13,14 +14,16 @@ export const TestNet: NetConnection = {
 export const MainNet: NetConnection = {
     BridgeEventContractAddress: "0xd37eAa8738F8AC6B48217b46a918Cf39929cEAB5",
     RPC_URL: "https://bsc-dataseed.binance.org/",
+    socket: '',
     stableCoinAddress: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     walletConfig: {
         address: "0x276e4B2EdE2a6d6A30A9E4453f9Ef6d69FFf3CD8"
     }
 }
 export const LocalNet: NetConnection = {
-    BridgeEventContractAddress: "0xa7F3fb5F0C4515c6bBCde00B77B6786f8d135Fb6",
-    RPC_URL: "HTTP://127.0.0.1:8545",
+    BridgeEventContractAddress: "0xa79964D88C3e78809EC28A9A5f49e8b116c28914",
+    RPC_URL: "http://127.0.0.1:8545",
+    socket: `ws://127.0.0.1:8545`,
     stableCoinAddress: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     walletConfig: {
         address: "0xa84019C3A670826555D3442EfB68ED49fd1660F4"
@@ -29,6 +32,7 @@ export const LocalNet: NetConnection = {
 export type NetConnection = {
     BridgeEventContractAddress: string,
     RPC_URL: string
+    socket: string
     stableCoinAddress: string
     walletConfig: WalletConnection
 

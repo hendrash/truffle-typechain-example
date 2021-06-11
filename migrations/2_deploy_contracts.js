@@ -7,7 +7,6 @@ module.exports = function(deployer, test) {
   // deployer.deploy(ConvertLib);
   // deployer.link(ConvertLib, MetaCoin);
   // deployer.deploy(MetaCoin);
-  console.log(deployer,"\n\n\n==", test)
   // deployer.autolink();
   deployer.deploy(BridgeEvent);
 };
