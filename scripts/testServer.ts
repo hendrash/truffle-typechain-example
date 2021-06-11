@@ -1,4 +1,4 @@
-import BridgeEvent from "../build/abi/BridgeEvent.json";
+import BridgeEvent from "../build/abi/TransferToUSDC.json";
 import { web3Provider, webSocketProvider } from "./config";
 import { networkConfig } from "./globals";
 

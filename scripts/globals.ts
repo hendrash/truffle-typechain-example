@@ -21,7 +21,7 @@ export const MainNet: NetConnection = {
     }
 }
 export const LocalNet: NetConnection = {
-    BridgeEventContractAddress: "0xa79964D88C3e78809EC28A9A5f49e8b116c28914",
+    BridgeEventContractAddress: "0x7f865760844979c7774864eC54919630647BDB5e",
     RPC_URL: "http://127.0.0.1:8545",
     socket: `ws://127.0.0.1:8545`,
     stableCoinAddress: '0xe9e7cea3dedca5984780bafc599bd69add087d56',

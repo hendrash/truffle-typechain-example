@@ -2,7 +2,7 @@ import { bridgeEvent } from "./config"
 import { networkConfig } from "./globals"
 let server = ()=>{
 	console.log(
-	bridgeEvent.methods.bridgeUSDC(10,networkConfig().stableCoinAddress).send({
+	bridgeEvent.methods.buyUSDC(10,networkConfig().stableCoinAddress).send({
 		from: networkConfig().walletConfig.address
 	},function(err:any, res: any){
 		if(err){

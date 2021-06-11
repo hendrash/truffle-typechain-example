@@ -1,6 +1,6 @@
 const Migrations = artifacts.require("Migrations");
-const BridgeEvent = artifacts.require("BridgeEvent");
+const TransferToUSDC = artifacts.require("TransferToUSDC");
 module.exports = function(deployer) {
   // deployer.deploy(Migrations);
-  deployer.deploy(BridgeEvent);
+  deployer.deploy(TransferToUSDC);
 };
