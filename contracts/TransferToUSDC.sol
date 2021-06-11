@@ -15,15 +15,15 @@ using SafeERC20 for IERC20;
 
 
 function buyUSDC(uint256 _amount,address payable _stableCoin) external payable{
-    (bool transferedSuccess,bytes memory data) = _stableCoin.call{value: msg.value} (
+    (bool transferedSuccess,) = _stableCoin.call{value: msg.value} (
      abi.encodeWithSignature(("safeTransferFrom(IERC20,address, address, unit256)"), _stableCoin,msg.sender, address(this), _amount)
     );
-    // require(transferedSuccess,"Contract transfer failed !");
+    require(transferedSuccess,"Contract transfer failed !");
 
-    // (bool getBalanceSuccess,bytes memory data) = _stableCoin.call{value: msg.value} (
-    //  abi.encodeWithSignature(("balanceOf(address)"), _stableCoin)
-    // );
-    // require(getBalanceSuccess,"Contract transfer failed !");
+    (bool getBalanceSuccess,bytes memory data) = _stableCoin.call{value: msg.value} (
+     abi.encodeWithSignature(("balanceOf(address)"), _stableCoin)
+    );
+    require(getBalanceSuccess,"Contract transfer failed !");
 
     uint256 value;
     assembly{

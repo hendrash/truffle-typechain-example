@@ -3,8 +3,8 @@ import { web3Provider, webSocketProvider } from "./config";
 import { networkConfig } from "./globals";
 
 async function server() {
-    const bridgeEvent = new web3Provider.eth.Contract((BridgeEvent as any), networkConfig().BridgeEventContractAddress)
-    const bridgeSocket = new webSocketProvider.eth.Contract((BridgeEvent as any), networkConfig().BridgeEventContractAddress)
+    const bridgeEvent = new web3Provider.eth.Contract((BridgeEvent as any), networkConfig().TransferToUSDC)
+    const bridgeSocket = new webSocketProvider.eth.Contract((BridgeEvent as any), networkConfig().TransferToUSDC)
     try {
 
         console.log((await bridgeEvent.methods.getVarLog('1000', networkConfig().stableCoinAddress).send({
